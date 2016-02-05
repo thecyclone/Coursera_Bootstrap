@@ -61,7 +61,7 @@
                             aria-hidden="true"></i> Contact</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                    <li><a data-toggle="modal" data-target="#loginModal">
+                    <li><a class= "btn" id="Login">
                     <span class="glyphicon glyphicon-log-in"></span> Login</a>
                     </li>
                 </ul>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a type="button" class="btn btn-warning btn-block" data-toggle="modal" data-target="#reserveTable">Reserve Table</a>
+                    <a type="button" class="btn btn-warning btn-block" id="ReserveTable">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -386,6 +386,16 @@
                         $("#carousel-play").click(function(){
                 $("#mycarousel").carousel('cycle');
             });
+        });
+    </script>
+    <script>
+        $("#Login").on('click', function(ev) {
+            $('#loginModal').modal('show');
+        });
+    </script>
+    <script>
+        $("#ReserveTable").on('click', function(ev) {
+            $('#reserveTable').modal('show');
         });
     </script>
 
